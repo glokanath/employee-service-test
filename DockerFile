@@ -1,3 +1,4 @@
 FROM openjdk:11
-COPY target/hello-World.jar helloworld.jar
-ENTRYPOINT ["java","-jar","helloworld.jar"]
+WORKDIR /app
+COPY target/emp-service.jar /app/emp-service.jar
+ENTRYPOINT ["java","-jar","emp-service.jar"]
