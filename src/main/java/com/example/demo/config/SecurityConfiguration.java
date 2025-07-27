@@ -1,3 +1,4 @@
+/*
 package com.example.demo.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,12 +22,14 @@ import lombok.RequiredArgsConstructor;
 public class SecurityConfiguration {
 	
 
-	@Autowired
-	private JwtAuthenticationFilter jwtAuthFilter;
-	/*
+	//@Autowired
+//	private JwtAuthenticationFilter jwtAuthFilter;
+	*/
+/*
 	 * @Bean private AuthenticationManager authenticationProvider() { return new
 	 * ProviderManager(null); }
-	 */
+	 *//*
+
 	//@Autowired
 	//private AuthenticationManager authenticationManager;
 	
@@ -35,13 +38,16 @@ public class SecurityConfiguration {
 		
 		http.headers().frameOptions().sameOrigin();
 
-		/*
+		*/
+/*
 		 * http.csrf(csrf-> csrf.disable()) // .authorizeHttpRequests(auth->
 		 * auth.requestMatchers("/*", "/h2-console/**").permitAll())
 		 * .authorizeHttpRequests().anyRequest().authenticated()
 		 * .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
-		 */
-		/*http
+		 *//*
+
+		*/
+/*http
         .csrf()
         .disable()
         .authorizeHttpRequests(auth-> auth.requestMatchers("/*", "/h2-console/**").permitAll())
@@ -51,7 +57,8 @@ public class SecurityConfiguration {
         .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
         .and()
         .authenticationProvider(authenticationManager)
-        .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);*/
+        .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);*//*
+
 
 
 
@@ -60,3 +67,4 @@ public class SecurityConfiguration {
 	}
 
 }
+*/
