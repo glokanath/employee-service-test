@@ -1,4 +1,4 @@
 FROM openjdk:11
 WORKDIR /app
-COPY target/emp-service.jar /app/emp-service.jar
+COPY target/emp-service.jar emp-service.jar
 ENTRYPOINT ["java","-jar","emp-service.jar"]
