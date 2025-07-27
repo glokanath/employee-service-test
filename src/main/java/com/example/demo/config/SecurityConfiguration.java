@@ -27,8 +27,8 @@ public class SecurityConfiguration {
 	 * @Bean private AuthenticationManager authenticationProvider() { return new
 	 * ProviderManager(null); }
 	 */
-	@Autowired
-	private AuthenticationManager authenticationManager;
+	//@Autowired
+	//private AuthenticationManager authenticationManager;
 	
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
@@ -41,7 +41,7 @@ public class SecurityConfiguration {
 		 * .authorizeHttpRequests().anyRequest().authenticated()
 		 * .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
 		 */
-		http
+		/*http
         .csrf()
         .disable()
         .authorizeHttpRequests(auth-> auth.requestMatchers("/*", "/h2-console/**").permitAll())
@@ -51,7 +51,7 @@ public class SecurityConfiguration {
         .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
         .and()
         .authenticationProvider(authenticationManager)
-        .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
+        .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);*/
 
 
 
